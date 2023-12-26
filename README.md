@@ -27,7 +27,7 @@ The Network Settings Reset Script is a powerful yet user-friendly Windows batch 
 ## ⚙️ Usage
 
 1. **📁 Download:** 
-Get the latest version of the script from the [Releases](https://github.com/M1HA15/network-maintenance/releases) page.
+Get the latest version of the script from the [Releases](https://github.com/M1HA15/Network-Settings-Reset/releases) page.
 
 2. **🛡️ Run with Administrator Privileges:**
    ```bash
