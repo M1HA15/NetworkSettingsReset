@@ -19,6 +19,7 @@ for /f "delims=" %%V in ('powershell -Command "$PSVersionTable.PSVersion.Major.T
     echo.
     echo PowerShell version: %PSVersion%
     echo.
+    echo.
     pause
     exit
 )
