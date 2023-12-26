@@ -103,7 +103,7 @@ echo.
 set /p "skipGitHub=Do you want to open the GitHub page of this project? (Y/N): "
 if /i "%skipGitHub%"=="Y" (
 	echo Opening default web browser...
-    start "" "https://github.com/M1HA15/network-maintenance"
+    start "" "https://github.com/M1HA15/Network-Settings-Reset"
 )
 
 echo.
