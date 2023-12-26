@@ -24,9 +24,9 @@ for /f "delims=" %%V in ('powershell -Command "$PSVersionTable.PSVersion.Major.T
 )
 
 echo ---------------------------------------------------------------------
-echo                             NSR(0.1) by Mihai       
+echo                           NSR(0.1) by Mihai       
 echo.
-echo     Warning: The script is running with administrator privileges.
+echo     Warning: The script is running with administrator privileges!
 echo                    PowerShell Version: %PSVersion%
 echo ---------------------------------------------------------------------
 echo.
