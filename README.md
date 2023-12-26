@@ -31,7 +31,7 @@ Get the latest version of the script from the [Releases](https://github.com/M1HA
 
 2. **🛡️ Run with Administrator Privileges:**
    ```bash
-   > NSR_v0.3.bat
+   > NSR.bat
    ```
    
 3. **🌎 Choose DNS Provider (Optional):**
