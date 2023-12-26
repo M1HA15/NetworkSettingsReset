@@ -64,7 +64,7 @@ If desired, restart your computer to apply the network settings changes.
 Use this script at your own risk. Be sure to understand the implications of resetting network settings on your system before running the script.
 
 ## 📝 Contributing
-We welcome contributions! Please read the [Contributing Guidelines](https://github.com/M1HA15/network-maintenance/blob/main/CONTRIBUTING.md) before submitting issues or pull requests.
+We welcome contributions! Please read the [Contributing Guidelines](https://github.com/M1HA15/Network-Settings-Reset/blob/main/CONTRIBUTING.md) before submitting issues or pull requests.
 
 ## 🚧 Report Issues
 If you encounter any issues, please [report them here](https://github.com/M1HA15/Network-Settings-Reset/issues).
