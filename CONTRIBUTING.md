@@ -33,6 +33,6 @@ Please adhere to the existing code style and formatting conventions used in the 
 
 ## 📃 License
 
-By contributing to this project, you agree that your contributions will be licensed under the [MIT License](https://github.com/M1HA15/Network-Settings-Reset/blob/main/LICENSE).
+By contributing to this project, you agree that your contributions will be licensed under the [GPL-3.0 License](https://github.com/M1HA15/Network-Settings-Reset/blob/main/LICENSE).
 
 Thank you for contributing to the Network Settings Reset Script!
