@@ -16,6 +16,7 @@ for /f "delims=" %%V in ('powershell -Command "$PSVersionTable.PSVersion.Major.T
     color 0C
     echo This script requires administrator privileges.
     echo Please run the script as an administrator.
+    echo.
     echo PowerShell version: %PSVersion%
     echo.
     pause
@@ -107,6 +108,7 @@ if /i "%skipGitHub%"=="Y" (
 )
 
 echo.
+
 set /p "skipRestartChoice=Do you want to restart the computer now? (Y/N): "
 if /i "%skipRestartChoice%"=="Y" (
     echo Restarting the computer...
