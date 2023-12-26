@@ -48,7 +48,7 @@ Get the latest version of the script from the [Releases](https://github.com/M1HA
     IPv6 DNS set to 2606:4700:4700::1111
    ```
 
-4. **🚀 NSR GitHub Page:**
+4. **🚀 NSR GitHub Page (Optional):**
    ```bash
    Do you want to open the GitHub page of this project? (Y/N): Y
    Opening default web browser...
