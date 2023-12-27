@@ -21,6 +21,7 @@ The Network Settings Reset Script is a powerful yet user-friendly Windows batch 
     - Google (8.8.8.8)
     - OpenDNS (208.67.222.222)
     - Quad9 (9.9.9.9)
+    - ControlD (76.76.2.0)
 
 - 🤝 **User-Friendly Restart Option:** After completing network tasks, the script prompts users to restart their computers for changes to take effect.
 
@@ -36,16 +37,19 @@ Get the latest version of the script from the [Releases](https://github.com/M1HA
    
 3. **🌎 Choose DNS Provider (Optional):**
    ```bash
-    [6] Set DNS provider:
-      [1] Cloudflare (1.1.1.1)
-      [2] Google (8.8.8.8)
-      [3] OpenDNS (208.67.222.222)
-      [4] Quad9 (9.9.9.9)
+   [6] Set DNS provider:
+     [1] Cloudflare (1.1.1.1)
+     [2] Google (8.8.8.8)
+     [3] OpenDNS (208.67.222.222)
+     [4] Quad9 (9.9.9.9)
+     [5] ControlD (76.76.2.0)
 
-    Choose DNS provider (1-4, press Enter to skip): 1
+   Choose DNS provider (1-5, press Enter to skip): 1
 
-    DNS set to 1.1.1.1 with secondary DNS 1.0.0.1
-    IPv6 DNS set to 2606:4700:4700::1111
+   Primary IPv4 DNS set to 1.1.1.1
+   Secondary IPv4 DNS set to 1.0.0.1
+   Primary IPv6 DNS set to 2606:4700:4700::1111
+   Secondary IPv6 DNS set to 2606:4700:4700::1001
    ```
 
 4. **🚀 NSR GitHub Page (Optional):**
@@ -57,7 +61,8 @@ Get the latest version of the script from the [Releases](https://github.com/M1HA
 5. **🌌 Restart (Optional):**
 If desired, restart your computer to apply the network settings changes.
      ```bash
-     Do you want to restart the computer to apply changes? (Y/N): Y
+     Do you want to restart the computer now? (Y/N): Y
+     We appreciate you using the script. Your computer will restart shortly!
      ```
 
 ## ⚠️ Disclaimer
@@ -73,6 +78,9 @@ Your feedback is valuable in improving the script!
 
 ## 👤 Author
 - **[Mihai](https://github.com/M1HA15)**
+
+## 👥 Contributors
+- **[rad](https://github.com/RadNotRed)**
 
 ## 📃 License
 This project is licensed under the GPL-3.0 License - see the [LICENSE](https://github.com/M1HA15/Network-Settings-Reset/blob/main/LICENSE) file for details.
