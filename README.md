@@ -18,10 +18,10 @@ The Network Settings Reset Script is a powerful yet user-friendly Windows batch 
 
     Choose from popular DNS providers:
     - Cloudflare (1.1.1.1)
-    - Google (8.8.8.8)
-    - OpenDNS (208.67.222.222)
+    - Cisco Umbrella (208.67.222.222)
+    - GCore (95.85.95.85)
     - Quad9 (9.9.9.9)
-    - ControlD (76.76.2.0)
+    - Google (8.8.8.8)
 
 - 🤝 **User-Friendly Restart Option:** After completing network tasks, the script prompts users to restart their computers for changes to take effect.
 
@@ -39,17 +39,20 @@ Get the latest version of the script from the [Releases](https://github.com/M1HA
    ```bash
    [6] Set DNS provider:
      [1] Cloudflare (1.1.1.1)
-     [2] Google (8.8.8.8)
-     [3] OpenDNS (208.67.222.222)
+     [2] Cisco Umbrella (208.67.222.222)
+     [3] GCore (95.85.95.85)
      [4] Quad9 (9.9.9.9)
-     [5] ControlD (76.76.2.0)
+     [5] Google (8.8.8.8)
 
    Choose DNS provider (1-5, press Enter to skip): 1
 
    Primary IPv4 DNS set to 1.1.1.1
    Secondary IPv4 DNS set to 1.0.0.1
+   Your selected IPv4 DNS provider is now active!
+
    Primary IPv6 DNS set to 2606:4700:4700::1111
    Secondary IPv6 DNS set to 2606:4700:4700::1001
+   Your selected IPv6 DNS provider is now active!
    ```
 
 4. **🚀 NSR GitHub Page (Optional):**
