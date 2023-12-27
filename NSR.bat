@@ -106,6 +106,8 @@ if defined DNS_IP (
 	echo Your selected IPv4 DNS provider is now active!
 )
 
+echo.
+
 if defined DNS_IPv6 (
     powershell -Command "& { Get-NetAdapter | ForEach-Object { try { Set-DnsClientServerAddress -InterfaceAlias $_.Name -ServerAddresses @('%DNS_IPv6%', '%DNS_Secondary_IPv6%') -ErrorAction Stop } catch { Write-Error $_ } } }"
     echo Primary IPv6 DNS set to %DNS_IPv6%
