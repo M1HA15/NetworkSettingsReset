@@ -88,15 +88,13 @@ if "%dnsChoice%"=="1" (
 )
 
 if defined DNS_IP (
-    powershell -Command "& { Get-NetAdapter -Physical | Where-Object { $_.Status -eq 'Up' } | ForEach-Object { Set-DnsClientServerAddress -InterfaceAlias $_.Name -ServerAddresses @('%DNS_IP%', '%DNS_Secondary_IP%') } }"
+    powershell -Command "& { Get-NetAdapter | ForEach-Object { try { Set-DnsClientServerAddress -InterfaceAlias $_.Name -ServerAddresses @('%DNS_IP%', '%DNS_Secondary_IP%') -ErrorAction Stop } catch { Write-Error $_ } } }"
     echo DNS set to %DNS_IP% with secondary DNS %DNS_Secondary_IP%
 )
 
 if defined DNS_IPv6 (
-    powershell -Command "& { Get-NetAdapter -Physical | Where-Object { $_.Status -eq 'Up' } | ForEach-Object { Set-DnsClientServerAddress -InterfaceAlias $_.Name -ServerAddresses @('%DNS_IPv6%') } }"
+    powershell -Command "& { Get-NetAdapter | ForEach-Object { try { Set-DnsClientServerAddress -InterfaceAlias $_.Name -ServerAddresses @('%DNS_IPv6%') -ErrorAction Stop } catch { Write-Error $_ } } }"
     echo IPv6 DNS set to %DNS_IPv6%
-) else (
-    echo DNS configuration skipped.
 )
 
 echo.
