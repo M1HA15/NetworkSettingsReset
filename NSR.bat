@@ -25,7 +25,7 @@ for /f "delims=" %%V in ('powershell -Command "$PSVersionTable.PSVersion.Major.T
 )
 
 echo ---------------------------------------------------------------------
-echo                           NSR(0.2) by Mihai       
+echo                               NSR (0.3)
 echo.
 echo     Warning: The script is running with administrator privileges!
 echo                    PowerShell Version: %PSVersion%
@@ -57,10 +57,10 @@ echo.
 
 echo [6] Set DNS provider:
 echo     [1] Cloudflare (1.1.1.1)
-echo     [2] Google (8.8.8.8)
-echo     [3] OpenDNS (208.67.222.222)
+echo     [2] Cisco Umbrella (208.67.222.222)
+echo     [3] GCore (95.85.95.85)
 echo     [4] Quad9 (9.9.9.9)
-echo     [5] ControlD (76.76.2.0)
+echo     [5] Google (8.8.8.8)
 echo.
 
 set /p "dnsChoice=Choose DNS provider (1-5, press Enter to skip): "
@@ -73,27 +73,27 @@ if "%dnsChoice%"=="1" (
     set DNS_IPv6=2606:4700:4700::1111
     set DNS_Secondary_IPv6=2606:4700:4700::1001
 ) else if "%dnsChoice%"=="2" (
-    set DNS_IP=8.8.8.8
-    set DNS_Secondary_IP=8.8.4.4
-    set DNS_IPv6=2001:4860:4860::8888
-    set DNS_Secondary_IPv6=2001:4860:4860::8844
-) else if "%dnsChoice%"=="3" (
     set DNS_IP=208.67.222.222
     set DNS_Secondary_IP=208.67.220.220
     set DNS_IPv6=2620:119:35::35
     set DNS_Secondary_IPv6=2620:119:53::53
+) else if "%dnsChoice%"=="3" (
+    set DNS_IP=95.85.95.85
+    set DNS_Secondary_IP=2.56.220.2
+    set DNS_IPv6=2a03:90c0:999d::1
+    set DNS_Secondary_IPv6=2a03:90c0:9992::1
 ) else if "%dnsChoice%"=="4" (
     set DNS_IP=9.9.9.9
     set DNS_Secondary_IP=149.112.112.112
     set DNS_IPv6=2620:fe::fe
     set DNS_Secondary_IPv6=2620:fe::9
 ) else if "%dnsChoice%"=="5" (
-    set DNS_IP=76.76.2.0
-    set DNS_Secondary_IP=76.76.10.0
-    set DNS_IPv6=2606:1a40::
-    set DNS_Secondary_IPv6=2606:1a40:1::
+    set DNS_IP=8.8.8.8
+    set DNS_Secondary_IP=8.8.4.4
+    set DNS_IPv6=2001:4860:4860::8888
+    set DNS_Secondary_IPv6=2001:4860:4860::8844
 ) else (
-    echo Invalid choice. You selected an option that doesn't exist. Skipping DNS provider selection...
+    echo Skipping DNS provider selection due to the selected option being nonexistent..
     echo If you wish to choose a DNS provider, you can run the script again!
     echo.
     goto :skipDNS
@@ -103,12 +103,14 @@ if defined DNS_IP (
     powershell -Command "& { Get-NetAdapter | ForEach-Object { try { Set-DnsClientServerAddress -InterfaceAlias $_.Name -ServerAddresses @('%DNS_IP%', '%DNS_Secondary_IP%') -ErrorAction Stop } catch { Write-Error $_ } } }"
     echo Primary IPv4 DNS set to %DNS_IP%
     echo Secondary IPv4 DNS set to %DNS_Secondary_IP%
+	echo Your selected IPv4 DNS provider is now active!
 )
 
 if defined DNS_IPv6 (
     powershell -Command "& { Get-NetAdapter | ForEach-Object { try { Set-DnsClientServerAddress -InterfaceAlias $_.Name -ServerAddresses @('%DNS_IPv6%', '%DNS_Secondary_IPv6%') -ErrorAction Stop } catch { Write-Error $_ } } }"
     echo Primary IPv6 DNS set to %DNS_IPv6%
     echo Secondary IPv6 DNS set to %DNS_Secondary_IPv6%
+	echo Your selected IPv6 DNS provider is now active!
 )
 
 echo.
@@ -125,11 +127,11 @@ echo.
 set /p "skipRestartChoice=Do you want to restart the computer now? (Y/N): "
 if /i "%skipRestartChoice%"=="Y" (
 	echo We appreciate you using the script. Your computer will restart shortly!
-    shutdown /r /t 6 /f
+    shutdown /r /t 5 /f
 ) else if /i "%skipRestartChoice%"=="N" (
 	echo We appreciate you using the script. Don't forget to restart your computer later!
     echo Waiting for 5 seconds before closing the window...
-    timeout /nobreak /t 5 > nul
+    timeout /nobreak /t 4 > nul
     exit
 ) else (
     echo Invalid choice. Press any key to close the window...
