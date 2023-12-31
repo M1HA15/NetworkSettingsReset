@@ -1,4 +1,4 @@
-# 🌐 Network Settings Reset(**NSR**)
+# 🌐 Network Settings Reset (**NSR**)
 
 ## 🚀 A Simple and Efficient Solution for Network Maintenance on Windows
 
@@ -23,6 +23,10 @@ The Network Settings Reset Script is a powerful yet user-friendly Windows batch 
     - Quad9 (9.9.9.9)
     - Google (8.8.8.8)
 
+  - **Script automatically pings the recommended DNS providers** for optimal performance before making a selection.
+
+  - Additionally, you can **input your custom DNS provider**, supporting both IPv4 and IPv6.
+
 - 🤝 **User-Friendly Restart Option:** After completing network tasks, the script prompts users to restart their computers for changes to take effect.
 
 ## ⚙️ Usage
@@ -37,22 +41,7 @@ Get the latest version of the script from the [Releases](https://github.com/M1HA
    
 3. **🌎 Choose DNS Provider (Optional):**
    ```bash
-   [6] Set DNS provider:
-     [1] Cloudflare (1.1.1.1)
-     [2] Cisco Umbrella (208.67.222.222)
-     [3] GCore (95.85.95.85)
-     [4] Quad9 (9.9.9.9)
-     [5] Google (8.8.8.8)
 
-   Choose DNS provider (1-5, press Enter to skip): 1
-
-   Primary IPv4 DNS set to 1.1.1.1
-   Secondary IPv4 DNS set to 1.0.0.1
-   Your selected IPv4 DNS provider is now active!
-
-   Primary IPv6 DNS set to 2606:4700:4700::1111
-   Secondary IPv6 DNS set to 2606:4700:4700::1001
-   Your selected IPv6 DNS provider is now active!
    ```
 
 4. **🚀 NSR GitHub Page (Optional):**
