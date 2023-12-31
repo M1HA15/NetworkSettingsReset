@@ -123,7 +123,7 @@ Your feedback is valuable in improving the script!
 - **[Mihai](https://github.com/M1HA15)**
 
 ## 👥 Contributors
-- **[rad](https://github.com/RadNotRed)**
+- **[Rad](https://github.com/RadNotRed)**
 
 ## 📃 License
 This project is licensed under the GPL-3.0 License - see the [LICENSE](https://github.com/M1HA15/Network-Settings-Reset/blob/main/LICENSE) file for details.
