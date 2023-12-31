@@ -94,6 +94,7 @@ echo     [4] Quad9 (9.9.9.9)
 echo     [5] Google (8.8.8.8)
 echo.
 set /p "recommendedDNSChoice=Enter your choice (1-5): "
+echo.
 if "%recommendedDNSChoice%"=="1" (
     set DNS_IP=1.1.1.1
     set DNS_Secondary_IP=1.0.0.1
