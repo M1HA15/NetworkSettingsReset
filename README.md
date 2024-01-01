@@ -14,18 +14,18 @@ The Network Settings Reset Script is a powerful yet user-friendly Windows batch 
   - **Releasing IP:** Releases the current IP address configuration.
   - **Renewing IP:** Obtains a new IP address configuration from a DHCP server.
   - **Resetting Winsock:** Resets the Winsock catalog to its default state.
-  - **Setting DNS Provider:** Allows users to choose their preferred DNS provider for enhanced browsing security and speed.
+  - **Setting DNS Provider:** Allows users to choose their preferred DNS Provider for enhanced browsing security and speed.
 
-    Choose from popular DNS providers:
+    Choose from popular DNS Providers:
     - Cloudflare (1.1.1.1)
     - Cisco Umbrella (208.67.222.222)
     - GCore (95.85.95.85)
     - Quad9 (9.9.9.9)
     - Google (8.8.8.8)
 
-  - **Script automatically pings the recommended DNS providers** for optimal performance before making a selection.
+  - **Script automatically pings the recommended DNS Providers** for optimal performance before making a selection.
 
-  - Additionally, you can **input your custom DNS provider**, supporting both IPv4 and IPv6.
+  - Additionally, you can **input your custom DNS Provider**, supporting both IPv4 and IPv6.
 
 - 🤝 **User-Friendly Restart Option:** After completing network tasks, the script prompts users to restart their computers for changes to take effect.
 
@@ -41,24 +41,38 @@ Get the latest version of the script from the [Releases](https://github.com/M1HA
    
 3. **🌎 Choose DNS Provider (Optional):**
    ```bash
-   [6] Set DNS provider:
+   [6] DNS Provider:
       [1] Recommended DNS Providers
-      [2] Input your DNS Providers
+      [2] Input your DNS Provider
       [3] Skip
 
-   Choose DNS provider (1-3): 1
+   Enter your choice (1-3): 1
 
-   Testing DNS providers to find the best one for you...
-   1.1.1.1: Minimum = 3ms, Maximum = 4ms, Average = 3ms
-   208.67.222.222: Minimum = 47ms, Maximum = 48ms, Average = 47ms
-   95.85.95.85: Minimum = 3ms, Maximum = 4ms, Average = 3ms
-   9.9.9.9: Minimum = 4ms, Maximum = 4ms, Average = 4ms
-   8.8.8.8: Minimum = 17ms, Maximum = 18ms, Average = 17ms
+   Testing DNS Providers to identify the most efficient one...
+   Please note that this process may take some time as we test multiple DNS Providers.
 
-   Testing complete! The DNS provider with the lowest ping times may be the best choice for you.
+   Warning: For accurate analysis, each test involves sending 20 packets, with each packet containing 32 bytes of data, to every DNS Provider!
 
 
-   Choose a recommended DNS provider:
+   Results for 1.1.1.1:
+   Minimum = 3ms, Maximum = 4ms, Average = 3ms
+
+   Results for 208.67.222.222:
+   Minimum = 47ms, Maximum = 51ms, Average = 47ms
+
+   Results for 95.85.95.85:
+   Minimum = 10ms, Maximum = 11ms, Average = 10ms
+
+   Results for 9.9.9.9:
+   Minimum = 3ms, Maximum = 5ms, Average = 4ms
+
+   Results for 8.8.8.8:
+   Minimum = 19ms, Maximum = 22ms, Average = 19ms
+
+   Testing complete! The DNS Provider with the lowest ping times may be the optimal choice for your network.
+
+
+   Choose a Recommended DNS Provider:
       [1] Cloudflare (1.1.1.1)
       [2] Cisco Umbrella (208.67.222.222)
       [3] GCore (95.85.95.85)
@@ -71,28 +85,8 @@ Get the latest version of the script from the [Releases](https://github.com/M1HA
    Secondary IPv4 DNS set to 1.0.0.1
    Primary IPv6 DNS set to 2606:4700:4700::1111
    Secondary IPv6 DNS set to 2606:4700:4700::1001
-   ```
-   ```bash
-   [6] Set DNS provider:
-      [1] Recommended DNS Providers
-      [2] Input your DNS Providers
-      [3] Skip
 
-   Choose DNS provider (1-3): 2
-
-   Do you want to visit DNSPerf to choose a DNS provider? (Y/N): Y
-
-   Please input the IPv4 and IPv6 addresses of the selected DNS provider!
-   Enter your primary IPv4 DNS address: 95.85.95.85
-   Enter your secondary IPv4 DNS address: 2.56.220.2
-   Enter your primary IPv6 DNS address: 2a03:90c0:999d::1
-   Enter your secondary IPv6 DNS address: 2a03:90c0:9992::1
-   Please wait a moment while we configure the desired addresses for the selected DNS provider.
-
-   Primary IPv4 DNS set to 95.85.95.85
-   Secondary IPv4 DNS set to 2.56.220.2
-   Primary IPv6 DNS set to 2a03:90c0:999d::1
-   Secondary IPv6 DNS set to 2a03:90c0:9992::1
+   Successfully activated the selected DNS Provider!
    ```
 
 4. **🚀 NSR GitHub Page (Optional):**
