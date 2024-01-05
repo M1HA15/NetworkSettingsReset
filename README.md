@@ -42,56 +42,18 @@ Get the latest version of the script from the [Releases](https://github.com/M1HA
 3. **🚨 Choose DNS Provider (Optional):**
    ```bash
    [6] DNS Provider:
-      [1] Recommended DNS Providers
-      [2] Input your DNS Provider
-      [3] Skip
-
-   Enter your choice (1-3): 1
-
-   Testing DNS Providers to identify the most efficient one...
-   Please note that this process may take some time as we test multiple DNS Providers.
-
-   Warning: For accurate analysis, each test involves sending 20 packets, with each packet containing 32 bytes of data, to every DNS Provider!
-
-
-   Results for 1.1.1.1:
-   Minimum = 3ms, Maximum = 4ms, Average = 3ms
-
-   Results for 208.67.222.222:
-   Minimum = 47ms, Maximum = 51ms, Average = 47ms
-
-   Results for 95.85.95.85:
-   Minimum = 10ms, Maximum = 11ms, Average = 10ms
-
-   Results for 9.9.9.9:
-   Minimum = 3ms, Maximum = 5ms, Average = 4ms
-
-   Results for 8.8.8.8:
-   Minimum = 19ms, Maximum = 22ms, Average = 19ms
-
-   Testing complete! The DNS Provider with the lowest ping times may be the optimal choice for your network.
-
-
-   Choose a Recommended DNS Provider:
-      [1] Cloudflare (1.1.1.1)
-      [2] Cisco Umbrella (208.67.222.222)
-      [3] GCore (95.85.95.85)
-      [4] Quad9 (9.9.9.9)
-      [5] Google (8.8.8.8)
+     [1] Recommended DNS Providers
+     [2] Test Recommended DNS Providers
+     [3] Input your DNS Provider
+     [4] Test your DNS Provider
+     [5] Skip
 
    Enter your choice (1-5): 1
-
-   Primary IPv4 DNS set to 1.1.1.1
-   Secondary IPv4 DNS set to 1.0.0.1
-   Primary IPv6 DNS set to 2606:4700:4700::1111
-   Secondary IPv6 DNS set to 2606:4700:4700::1001
-
-   Successfully activated the selected DNS Provider!
    ```
 
 4. **📢 Explore the author's other project (Optional):**
    ```bash
-   Do you want to open the GitHub page of this project? (Y/N): Y
+   Want to check out our other project? (Y/N): Y
    Opening default web browser...
    ```
 
@@ -103,7 +65,7 @@ If desired, restart your computer to apply the network settings changes.
      ```
 
 ## ⚠️ Disclaimer:
-This script is provided as-is, and the author takes no responsibility for any damage, loss of data, or unforeseen consequences caused by its usage. Additionally, be sure to understand the implications of the network maintenance tasks, including potential risks associated with resetting network settings, before running NSR on your system! Use this script at your own risk.
+This script is provided as-is, and the author takes no responsibility for any damage, loss of data, or unforeseen consequences caused by its usage. Additionally, be sure to understand the implications of the network maintenance tasks, including potential risks associated with resetting network settings and loss of data, before running NSR on your system! Use this script at your own risk!
 
 ## 📝 Contributing:
 We welcome contributions! Please read the [Contributing Guidelines](https://github.com/M1HA15/Network-Settings-Reset/blob/main/CONTRIBUTING.md) before submitting issues or pull requests.
