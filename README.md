@@ -1,10 +1,10 @@
 # 🌐 Network Settings Reset (**NSR**)
 
-## 🚀 A Simple and Efficient Solution for Network Maintenance on Windows
+## 🚀 A Simple and Efficient Solution for Network Maintenance on Windows:
 
 The Network Settings Reset Script is a powerful yet user-friendly Windows batch script designed to simplify the process of resetting and maintaining network settings. It's perfect for users who want to optimize their network configurations, resolve connectivity issues, or refresh DNS settings with just a few clicks.
 
-## 💻 Key Features
+## 💻 Key Features:
 
 - 🔰 **Administrator Privileges and PowerShell Check**: Ensures seamless execution by verifying that the script is run with administrator privileges and within a PowerShell environment. This script leverages PowerShell for applying DNS providers.
 
@@ -29,7 +29,7 @@ The Network Settings Reset Script is a powerful yet user-friendly Windows batch 
 
 - 🤝 **User-Friendly Restart Option**: After completing the network tasks, the script provides a user-friendly prompt, allowing users to restart their computers for the changes to take full effect.
 
-## ⚙️ Usage
+## ⚙️ Usage:
 
 1. **📁 Download:** 
 Get the latest version of the script from the [Releases](https://github.com/M1HA15/Network-Settings-Reset/releases) page.
@@ -102,13 +102,13 @@ If desired, restart your computer to apply the network settings changes.
      We appreciate you using the script. Your computer will restart shortly!
      ```
 
-## ⚠️ Disclaimer
+## ⚠️ Disclaimer:
 This script is provided as-is, and the author takes no responsibility for any damage, loss of data, or unforeseen consequences caused by its usage. Additionally, be sure to understand the implications of the network maintenance tasks, including potential risks associated with resetting network settings, before running NSR on your system! Use this script at your own risk.
 
-## 📝 Contributing
+## 📝 Contributing:
 We welcome contributions! Please read the [Contributing Guidelines](https://github.com/M1HA15/Network-Settings-Reset/blob/main/CONTRIBUTING.md) before submitting issues or pull requests.
 
-## 🚧 Report Issues
+## 🚧 Report Issues:
 If you encounter any issues, please [report them here](https://github.com/M1HA15/Network-Settings-Reset/issues).
 
 Your feedback is valuable in improving the script!
@@ -117,5 +117,5 @@ Your feedback is valuable in improving the script!
 - **[Mihai (Author)](https://github.com/M1HA15)**
 - **[Rad (Contributor)](https://github.com/RadNotRed)**
 
-## 📃 License
+## 📃 License:
 This project is licensed under the GPL-3.0 License - see the [LICENSE](https://github.com/M1HA15/Network-Settings-Reset/blob/main/LICENSE) file for details.
