@@ -23,15 +23,15 @@ Welcome to the Network Settings Reset Script – your go-to solution for streaml
   - **Setting DNS Provider:** Allows users to choose their preferred DNS Provider for enhanced browsing security and speed.
 
     Choose from popular DNS Providers:
-    - Cloudflare (1.1.1.1)
-    - Cisco Umbrella (208.67.222.222)
-    - GCore (95.85.95.85)
-    - Quad9 (9.9.9.9)
-    - Google (8.8.8.8)
+    - **Cloudflare (1.1.1.1)**
+    - **Cisco Umbrella (208.67.222.222)**
+    - **GCore (95.85.95.85)**
+    - **Quad9 (9.9.9.9)**
+    - **Google (8.8.8.8)**
 
-  - **Script automatically pings the recommended DNS Providers** for optimal performance before making a selection.
+   - **Ping Test:** The script includes an option to ping the recommended DNS Providers. Additionally, it allows you to input your custom DNS Provider for evaluation.
 
-  - Additionally, you can **input your custom DNS Provider**, supporting both IPv4 and IPv6.
+   - **Custom DNS Provider:** If you have a specific DNS Provider in mind, you can input its details, and the script will add your IPv4 and IPv6 DNS provider addresses.
 
 - 🤝 **User-Friendly Restart Option**: After completing the network tasks, the script provides a user-friendly prompt, allowing users to restart their computers for the changes to take full effect.
 
