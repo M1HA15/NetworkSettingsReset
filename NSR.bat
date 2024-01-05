@@ -25,7 +25,7 @@ for /f "delims=" %%V in ('powershell -Command "$PSVersionTable.PSVersion.Major.T
 )
 
 echo ---------------------------------------------------------------------
-echo                               NSR (0.5)
+echo                               NSR (0.6)
 echo.
 echo     Warning: The script is running with administrator privileges!
 echo           Warning: This version may contain bugs or issues!
@@ -33,9 +33,9 @@ echo                    PowerShell Version: %PSVersion%
 echo ---------------------------------------------------------------------
 echo.
 echo.
-timeout /nobreak /t 2 > nul
+timeout /nobreak /t 3 > nul
 
-echo [1] Flushing DNS...
+echo [1] Flushing DNS Cache...
 ipconfig /flushdns
 echo.
 
@@ -43,11 +43,11 @@ echo [2] Registering DNS...
 ipconfig /registerdns
 echo.
 
-echo [3] Releasing IP...
+echo [3] Releasing IP Address...
 ipconfig /release
 echo.
 
-echo [4] Renewing IP...
+echo [4] Renewing IP Address...
 ipconfig /renew
 echo.
 
@@ -55,43 +55,34 @@ echo [5] Resetting Winsock...
 netsh winsock reset
 echo.
 
-timeout /nobreak /t 1 > nul
+timeout /nobreak /t 2 > nul
 
+
+:menuDNS
 echo [6] DNS Provider:
 echo     [1] Recommended DNS Providers
-echo     [2] Input your DNS Provider
-echo     [3] Skip
+echo     [2] Test Recommended DNS Providers
+echo     [3] Input your DNS Provider
+echo     [4] Test your DNS Provider
+echo     [5] Skip
 echo.
 
-set /p "dnsChoice=Enter your choice (1-3): "
+set /p "dnsChoice=Enter your choice (1-4): "
 echo.
 
-if "%dnsChoice%"=="" goto :skipDNS
+if "%dnsChoice%"=="" goto :menuDNS
 
 if "%dnsChoice%"=="1" goto :recommendedDNS
-if "%dnsChoice%"=="2" goto :customDNS
-if "%dnsChoice%"=="3" goto :skipDNS
+if "%dnsChoice%"=="2" goto :pingDNS
+if "%dnsChoice%"=="3" goto :customDNS
+if "%dnsChoice%"=="4" goto :pingDNS2
+if "%dnsChoice%"=="5" goto :skipDNS
 
-echo Invalid choice!
-goto :skipDNS
+echo Invalid choice! Returning to the DNS menu...
+echo.
+goto :menuDNS
 
 :recommendedDNS
-echo Testing DNS Providers to identify the most efficient one...
-echo Please note that this process may take some time as we test multiple DNS Providers.
-echo.
-echo Warning: For accurate analysis, each test involves sending 20 packets, with each packet containing 32 bytes of data, to every DNS Provider!
-echo.
-echo.
-for %%i in (1.1.1.1 208.67.222.222 95.85.95.85 9.9.9.9 8.8.8.8) do (
-    for /f "tokens=*" %%a in ('ping -n 20 -w 1000 %%i ^| find "Minimum"') do (
-		echo Results for %%i:
-        echo %%a
-		echo.
-    )
-)
-echo Testing complete! The DNS Provider with the lowest ping times may be the optimal choice for your network.
-echo.
-echo.
 echo Choose a Recommended DNS Provider:
 echo     [1] Cloudflare (1.1.1.1)
 echo     [2] Cisco Umbrella (208.67.222.222)
@@ -134,6 +125,44 @@ if "%recommendedDNSChoice%"=="1" (
 )
 goto :setDNS
 
+:pingDNS
+echo Commencing Recommended DNS Providers Evaluation...
+echo Please be aware that this analysis may require some time to complete.
+echo.
+echo Warning: This thorough evaluation includes the transmission of 20 packets, with each packet carrying 32 bytes of data, to every DNS Providers!
+echo.
+echo.
+for %%i in (1.1.1.1 208.67.222.222 95.85.95.85 9.9.9.9 8.8.8.8) do (
+    for /f "tokens=*" %%a in ('ping -n 20 -w 1000 %%i ^| find "Minimum"') do (
+		echo Results for %%i:
+        echo %%a
+		echo.
+    )
+)
+echo Testing complete! The DNS Provider with the lowest ping times may be the optimal choice for your network.
+echo.
+goto :menuDNS
+
+:pingDNS2
+echo Commencing DNS Provider Evaluation...
+echo Please be aware that this analysis may require some time to complete.
+echo.
+echo Warning: This thorough evaluation includes the transmission of 20 packets, with each packet carrying 32 bytes of data, to the specified DNS Provider!
+echo.
+echo.
+
+set /p "customDNS=Enter your DNS Provider: "
+
+for /f "tokens=*" %%a in ('ping -n 20 -w 1000 %customDNS% ^| find "Minimum"') do (
+    echo Results for %customDNS%:
+    echo %%a
+    echo.
+)
+
+echo Testing complete! The DNS Provider with the lowest ping times may be the optimal choice for your network.
+echo.
+goto :menuDNS
+
 :customDNS
 set /p "visitDNSPerf=Do you want to visit DNSPerf to choose a DNS Provider? (Y/N): "
 if /i "%visitDNSPerf%"=="Y" (
@@ -172,11 +201,19 @@ echo.
 echo.
 
 :setGitHub
-set /p "skipGitHub=Do you want to open the GitHub page of this project? (Y/N): "
-if /i "%skipGitHub%"=="Y" (
+set /p "skipCleany=Want to check out our other project? (Y/N): "
+if /i "%skipCleany%"=="Y" (
     echo Opening default web browser...
-    start "" "https://github.com/M1HA15/Network-Settings-Reset"
+    start "" "https://github.com/M1HA15/Cleany"
+) else if /i "%skipCleany%"=="N" (
+	echo Skiping this section...
+	goto :setRestart
+) else (
+	echo You have chosen an invalid option! Please select a correct option...
+	echo.
+	goto :setGitHub
 )
+
 
 echo.
 
