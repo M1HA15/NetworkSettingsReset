@@ -56,7 +56,8 @@ netsh winsock reset
 echo.
 
 timeout /nobreak /t 2 > nul
-
+echo.
+echo.
 
 :menuDNS
 echo [6] DNS Provider:
@@ -67,7 +68,7 @@ echo     [4] Test your DNS Provider
 echo     [5] Skip
 echo.
 
-set /p "dnsChoice=Enter your choice (1-4): "
+set /p "dnsChoice=Enter your choice (1-5): "
 echo.
 
 if "%dnsChoice%"=="" goto :menuDNS
@@ -139,7 +140,7 @@ for %%i in (1.1.1.1 208.67.222.222 95.85.95.85 9.9.9.9 8.8.8.8) do (
 		echo.
     )
 )
-echo Testing complete! The DNS Provider with the lowest ping times may be the optimal choice for your network.
+echo Testing complete! Consider the DNS Provider with the lowest ping times for optimal network performance.
 echo.
 goto :menuDNS
 
@@ -159,7 +160,7 @@ for /f "tokens=*" %%a in ('ping -n 20 -w 1000 %customDNS% ^| find "Minimum"') do
     echo.
 )
 
-echo Testing complete! The DNS Provider with the lowest ping times may be the optimal choice for your network.
+echo Testing complete! Optimal DNS Provider based on lowest ping times.
 echo.
 goto :menuDNS
 
@@ -213,7 +214,6 @@ if /i "%skipCleany%"=="Y" (
 	echo.
 	goto :setGitHub
 )
-
 
 echo.
 
