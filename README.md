@@ -6,9 +6,9 @@ The Network Settings Reset Script is a powerful yet user-friendly Windows batch 
 
 ## 💻 Key Features
 
-- ⛔ **Administrator Privileges Check:** Ensures seamless execution by verifying that the script is run with administrator privileges.
+- 🔰 **Administrator Privileges and PowerShell Check**: Ensures seamless execution by verifying that the script is run with administrator privileges and within a PowerShell environment. This script leverages PowerShell for applying DNS providers.
 
-- 📊 **Comprehensive Network Maintenance Tasks:**
+- ⚒️ **Comprehensive Network Maintenance Tasks:**
   - **Flushing DNS:** Clears the DNS resolver cache for improved performance.
   - **Registering DNS:** Refreshes DHCP leases and re-registers DNS names.
   - **Releasing IP:** Releases the current IP address configuration.
@@ -27,7 +27,7 @@ The Network Settings Reset Script is a powerful yet user-friendly Windows batch 
 
   - Additionally, you can **input your custom DNS Provider**, supporting both IPv4 and IPv6.
 
-- 🤝 **User-Friendly Restart Option:** After completing network tasks, the script prompts users to restart their computers for changes to take effect.
+- 🤝 **User-Friendly Restart Option**: After completing the network tasks, the script provides a user-friendly prompt, allowing users to restart their computers for the changes to take full effect.
 
 ## ⚙️ Usage
 
@@ -39,7 +39,7 @@ Get the latest version of the script from the [Releases](https://github.com/M1HA
    > NSR.bat
    ```
    
-3. **🌎 Choose DNS Provider (Optional):**
+3. **🚨 Choose DNS Provider (Optional):**
    ```bash
    [6] DNS Provider:
       [1] Recommended DNS Providers
@@ -89,7 +89,7 @@ Get the latest version of the script from the [Releases](https://github.com/M1HA
    Successfully activated the selected DNS Provider!
    ```
 
-4. **🚀 NSR GitHub Page (Optional):**
+4. **📢 Explore the author's other project (Optional):**
    ```bash
    Do you want to open the GitHub page of this project? (Y/N): Y
    Opening default web browser...
@@ -103,7 +103,7 @@ If desired, restart your computer to apply the network settings changes.
      ```
 
 ## ⚠️ Disclaimer
-Use this script at your own risk. Be sure to understand the implications of resetting network settings on your system before running the script.
+This script is provided as-is, and the author takes no responsibility for any damage, loss of data, or unforeseen consequences caused by its usage. Additionally, be sure to understand the implications of the network maintenance tasks, including potential risks associated with resetting network settings, before running NSR on your system! Use this script at your own risk.
 
 ## 📝 Contributing
 We welcome contributions! Please read the [Contributing Guidelines](https://github.com/M1HA15/Network-Settings-Reset/blob/main/CONTRIBUTING.md) before submitting issues or pull requests.
@@ -113,11 +113,9 @@ If you encounter any issues, please [report them here](https://github.com/M1HA15
 
 Your feedback is valuable in improving the script!
 
-## 👤 Author
-- **[Mihai](https://github.com/M1HA15)**
-
-## 👥 Contributors
-- **[Rad](https://github.com/RadNotRed)**
+## 🚀 Developers:
+- **[Mihai (Author)](https://github.com/M1HA15)**
+- **[Rad (Contributor)](https://github.com/RadNotRed)**
 
 ## 📃 License
 This project is licensed under the GPL-3.0 License - see the [LICENSE](https://github.com/M1HA15/Network-Settings-Reset/blob/main/LICENSE) file for details.
