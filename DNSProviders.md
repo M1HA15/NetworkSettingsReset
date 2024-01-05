@@ -1,4 +1,4 @@
-# 🌍 DNS Providers
+# 🌍 NSR DNS Providers List
 
 Welcome to our recommended DNS Providers! **Below are some DNS Providers we endorse**. If you wish to explore additional DNS Providers, you can use this website: **[DNS Performance](https://www.dnsperf.com/)**.
 
@@ -56,3 +56,11 @@ Welcome to our recommended DNS Providers! **Below are some DNS Providers we endo
 
 
 - *IPv6*: **Primary** Address | **Secondary** Address
+
+
+
+
+
+##
+🔗 Users can easily add these DNS Providers to their computer using NSR, avoiding any issues. 
+Check out our [Releases](https://github.com/M1HA15/Network-Settings-Reset/releases) page for the latest updates!
