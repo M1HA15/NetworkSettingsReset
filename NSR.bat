@@ -145,14 +145,15 @@ echo.
 goto :menuDNS
 
 :pingDNS2
+set /p "customDNS=Enter your DNS Provider: "
+echo.
+
 echo Commencing DNS Provider Evaluation...
 echo Please be aware that this analysis may require some time to complete.
 echo.
 echo Warning: This thorough evaluation includes the transmission of 20 packets, with each packet carrying 32 bytes of data, to the specified DNS Provider!
 echo.
 echo.
-
-set /p "customDNS=Enter your DNS Provider: "
 
 for /f "tokens=*" %%a in ('ping -n 20 -w 1000 %customDNS% ^| find "Minimum"') do (
     echo Results for %customDNS%:
