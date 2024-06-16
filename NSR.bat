@@ -105,6 +105,7 @@ cls
 echo ---------------------------------------------------------------------
 echo                      Recommended DNS Providers
 echo ---------------------------------------------------------------------
+echo.
 echo Choose a Recommended DNS Provider:
 echo     [1] Cloudflare (1.1.1.1)
 echo     [2] Cisco Umbrella (208.67.222.222)
@@ -154,6 +155,15 @@ cls
 echo ---------------------------------------------------------------------
 echo                      Enter Your DNS Provider
 echo ---------------------------------------------------------------------
+echo.
+set /p "openDNS=Do you want to view other DNS Providers on our GitHub Page? (Y/N): "
+if /i "%openDNS%"=="Y" (
+    echo Opening default web browser...
+    start "" "https://github.com/M1HA15/Network-Settings-Reset/blob/main/DNSProviders.md"
+) else if /i "%openDNS%"=="N" (
+	echo Skipping this part...
+)
+echo.
 echo.
 set /p "DNS_IP=Enter your Primary IPv4 DNS address: "
 set /p "DNS_Secondary_IP=Enter your Secondary IPv4 DNS address: "
@@ -218,7 +228,7 @@ echo.
 echo.
 
 for %%i in (1.1.1.1 208.67.222.222 95.85.95.85 9.9.9.9 8.8.8.8) do (
-    for /f "tokens=*" %%a in ('ping -n 30 -w 1000 %%i ^| find "Minimum"') do (
+    for /f "tokens=*" %%a in ('ping -n 25 -w 1000 %%i ^| find "Minimum"') do (
         echo Results for %%i:
         echo %%a
         echo.
@@ -229,13 +239,17 @@ goto :mainMenu
 
 :pingCustomDNS
 cls
+echo ---------------------------------------------------------------------
+echo                      Ping Custom DNS Provider
+echo ---------------------------------------------------------------------
+echo.
 set /p "customDNS=Enter your DNS Provider: "
 echo.
 echo Note: This sequence will take some time to complete as it performs Ping Tests on your Custom DNS Provider. Please be patient while the script is running...
 echo.
 echo.
 
-for /f "tokens=*" %%a in ('ping -n 30 -w 1000 %customDNS% ^| find "Minimum"') do (
+for /f "tokens=*" %%a in ('ping -n 25 -w 1000 %customDNS% ^| find "Minimum"') do (
     echo Results for %customDNS%:
     echo %%a
     echo.
@@ -256,7 +270,7 @@ goto :mainMenu
 
 :infoScript
 cls
-set "betaVersion=Y(0.3)"
+set "betaVersion=No"
 echo ---------------------------------------------------------------------
 echo                      Info About Script
 echo ---------------------------------------------------------------------
@@ -266,24 +280,36 @@ echo Version: 0.7
 echo Author: M1HA15
 echo Beta Version: %betaVersion%
 echo.
-set /p "openGitHub=Do you want to open NSR GitHub Page? (Y/N): "
+
+set /p "openGitHub=Do you want to open the NSR GitHub Page? (Y/N): "
 if /i "%openGitHub%"=="Y" (
     echo Opening default web browser...
     start "" "https://github.com/M1HA15/Network-Settings-Reset"
+) else if /i "%openGitHub%"=="N" (
+	echo Skipping this part...
 )
+
 echo.
 echo.
+
 set /p "openCleany=Do you want to check Cleany? (Y/N): "
 if /i "%openCleany%"=="Y" (
     echo Opening default web browser...
     start "" "https://github.com/M1HA15/Cleany"
+) else if /i "%openCleany%"=="N" (
+	echo Skipping this part...
 )
+
 echo.
 echo.
 pause
 goto :mainMenu
 
 :exitMenu
+cls
+echo ---------------------------------------------------------------------
+echo                          Exiting NSR
+echo ---------------------------------------------------------------------
 echo.
 set /p "skipRestartChoice=Do you want to restart the computer now? (Y/N): "
 if /i "%skipRestartChoice%"=="Y" (
