@@ -97,5 +97,8 @@ Your feedback is valuable in improving the script!
 - **[Mihai (Author)](https://github.com/M1HA15)**
 - **[Rad (Contributor)](https://github.com/RadNotRed)**
 
+## 🙏 Acknowledgments:
+**Thank you for choosing NSR**! Special gratitude to you, the user, for your support and for choosing to utilize this script.
+
 ## 📃 License:
 This project is licensed under the GPL-3.0 License - see the [LICENSE](https://github.com/M1HA15/Network-Settings-Reset/blob/main/LICENSE) file for details.
