@@ -270,7 +270,7 @@ goto :mainMenu
 
 :infoScript
 cls
-set "betaVersion=No"
+set "betaVersion=NO"
 echo ---------------------------------------------------------------------
 echo                      Info About Script
 echo ---------------------------------------------------------------------
