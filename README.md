@@ -2,7 +2,7 @@
 
 ## 🚀 Introduction:
 
-Welcome to the Network Settings Reset Script – your go-to solution for streamlining network maintenance on Windows! If you've ever found yourself struggling with sluggish internet connections, mysterious connectivity hiccups, or simply want to fine-tune your network settings for optimal performance, you're in the right place.
+Welcome to the Network Settings Reset Script – your go-to solution for streamlining network maintenance on Windows! If you've ever found yourself struggling with sluggish internet connections, mysterious connectivity issues, or simply want to fine-tune your network settings for optimal performance, you're in the right place.
 
 ## 🌟 Why Choose NSR?
 
@@ -12,28 +12,34 @@ Welcome to the Network Settings Reset Script – your go-to solution for streaml
 
 ## 💻 Key Features:
 
-- 🔰 **Administrator Privileges and PowerShell Check**: Ensures seamless execution by verifying that the script is run with administrator privileges and within a PowerShell environment. This script leverages PowerShell for applying DNS providers.
+### 🔰 Administrator Privileges and PowerShell Check
 
-- ⚒️ **Comprehensive Network Maintenance Tasks:**
-  - **Flushing DNS:** Clears the DNS resolver cache for improved performance.
-  - **Registering DNS:** Refreshes DHCP leases and re-registers DNS names.
-  - **Releasing IP:** Releases the current IP address configuration.
-  - **Renewing IP:** Obtains a new IP address configuration from a DHCP server.
-  - **Resetting Winsock:** Resets the Winsock catalog to its default state.
-  - **Setting DNS Provider:** Allows users to choose their preferred DNS Provider for enhanced browsing security and speed.
+Ensures seamless execution by verifying that the script is run with administrator privileges and within a PowerShell environment. This script leverages PowerShell for applying DNS providers.
 
-    Choose from popular DNS Providers:
-    - **Cloudflare (1.1.1.1)**
-    - **Cisco Umbrella (208.67.222.222)**
-    - **GCore (95.85.95.85)**
-    - **Quad9 (9.9.9.9)**
-    - **Google (8.8.8.8)**
+### ⚒️ Comprehensive Network Maintenance Tasks
 
-   - **Ping Test:** The script includes an option to ping the recommended DNS Providers. Additionally, it allows you to input your custom DNS Provider for evaluation.
+- **Flushing DNS Cache:** Clears the DNS resolver cache for improved performance.
+- **Registering DNS:** Refreshes DHCP leases and re-registers DNS names.
+- **Releasing IP Address:** Releases the current IP address configuration.
+- **Renewing IP Address:** Obtains a new IP address configuration from a DHCP server.
+- **Resetting Winsock:** Resets the Winsock catalog to its default state.
+- **Setting DNS Provider:** Allows users to choose their preferred DNS Provider for enhanced browsing security and speed.
 
-   - **Custom DNS Provider:** If you have a specific DNS Provider in mind, you can input its details, and the script will add your IPv4 and IPv6 DNS provider addresses.
+### 🌐 DNS Provider Options
 
-- 🤝 **User-Friendly Restart Option**: After completing the network tasks, the script provides a user-friendly prompt, allowing users to restart their computers for the changes to take full effect.
+Choose from popular DNS Providers:
+- **Cloudflare (1.1.1.1)**
+- **Cisco Umbrella (208.67.222.222)**
+- **GCore (95.85.95.85)**
+- **Quad9 (9.9.9.9)**
+- **Google (8.8.8.8)**
+
+- **Custom DNS Provider:** If you have a specific DNS Provider in mind, you can input its details, and the script will add your IPv4 and IPv6 DNS provider addresses.
+- **Ping Test:** The script includes an option to ping the recommended DNS Providers. Additionally, it allows you to input your custom DNS Provider for evaluation.
+
+### 🤝 User-Friendly Restart Option
+
+After completing the network tasks, the script provides a user-friendly prompt, allowing users to restart their computers for the changes to take full effect.
 
 ## ⚙️ Usage:
 
