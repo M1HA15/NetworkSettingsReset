@@ -12,11 +12,11 @@ Welcome to the Network Settings Reset Script – your go-to solution for streaml
 
 ## 💻 Key Features:
 
-### 🔰 Administrator Privileges and PowerShell Check
+### 🔰 Administrator Privileges and PowerShell Check:
 
 Ensures seamless execution by verifying that the script is run with administrator privileges and within a PowerShell environment. This script leverages PowerShell for applying DNS providers.
 
-### ⚒️ Comprehensive Network Maintenance Tasks
+### ⚒️ Comprehensive Network Maintenance Tasks:
 
 - **Flushing DNS Cache:** Clears the DNS resolver cache for improved performance.
 - **Registering DNS:** Refreshes DHCP leases and re-registers DNS names.
@@ -25,7 +25,7 @@ Ensures seamless execution by verifying that the script is run with administrato
 - **Resetting Winsock:** Resets the Winsock catalog to its default state.
 - **Setting DNS Provider:** Allows users to choose their preferred DNS Provider for enhanced browsing security and speed.
 
-### 🌐 DNS Provider Options
+### 🌐 DNS Provider Options:
 
 Choose from popular DNS Providers:
 - **Cloudflare (1.1.1.1)**
@@ -37,7 +37,7 @@ Choose from popular DNS Providers:
 - **Custom DNS Provider:** If you have a specific DNS Provider in mind, you can input its details, and the script will add your IPv4 and IPv6 DNS provider addresses.
 - **Ping Test:** The script includes an option to ping the recommended DNS Providers. Additionally, it allows you to input your custom DNS Provider for evaluation.
 
-### 🤝 User-Friendly Restart Option
+### 🤝 User-Friendly Restart Option:
 
 After completing the network tasks, the script provides a user-friendly prompt, allowing users to restart their computers for the changes to take full effect.
 
@@ -53,27 +53,33 @@ Get the latest version of the script from the [Releases](https://github.com/M1HA
    
 3. **🚨 Choose DNS Provider (Optional):**
    ```bash
-   [6] DNS Provider:
-     [1] Recommended DNS Providers
-     [2] Test Recommended DNS Providers
-     [3] Input your DNS Provider
-     [4] Test your DNS Provider
-     [5] Skip
+   ---------------------------------------------------------------------
+                        Change DNS Provider
+   ---------------------------------------------------------------------
 
-   Enter your choice (1-5): 1
+   [1] Recommended DNS Providers
+   [2] Enter Your Provider
+   [3] Exit
+
+   Enter your choice (1-3):
    ```
 
 4. **📢 Explore the author's other project (Optional):**
    ```bash
-   Want to check out our other project? (Y/N): Y
+   Do you want to check Cleany? (Y/N): Y
    Opening default web browser...
    ```
 
 5. **🌌 Restart (Optional):**
 If desired, restart your computer to apply the network settings changes.
      ```bash
-     Do you want to restart the computer now? (Y/N): Y
-     We appreciate you using the script. Your computer will restart shortly!
+   ---------------------------------------------------------------------
+                            Exiting NSR
+   ---------------------------------------------------------------------
+
+   Do you want to restart the computer now? (Y/N): Y
+     
+   Thank you for utilizing the script! Your computer will restart shortly...
      ```
 
 ## ⚠️ Disclaimer:
