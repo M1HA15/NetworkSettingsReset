@@ -37,6 +37,18 @@ Choose from popular DNS Providers:
 - **Custom DNS Provider:** If you have a specific DNS Provider in mind, you can input its details, and the script will add your IPv4 and IPv6 DNS provider addresses.
 - **Ping Test:** The script includes an option to ping the recommended DNS Providers. Additionally, it allows you to input your custom DNS Provider for evaluation.
 
+### 📈 Bufferbloat Optimization:
+
+We have integrated a powerful script from [Khorvie Tech](https://github.com/Khorvie-Tech/bufferbloat) to tackle bufferbloat issues. Bufferbloat occurs when network latency increases due to excessive buffering, especially during high-bandwidth usage. 
+
+#### Features:
+- **Advanced Registry Changes:** Applies tweaks to optimize TCP/IP settings for lower latency.
+- **Compatible with Modern Windows Versions:** Ensures smooth operation with the latest Windows builds.
+- **Easy to Use:** The script runs seamlessly as part of the NSR process.
+
+#### Testing Results:
+To verify the improvements, we recommend using [WAVEFORM - Bufferbloat and Internet Speed Test](https://www.waveform.com/tools/bufferbloat) or similar tools. 
+
 ### 🤝 User-Friendly Restart Option:
 
 After completing the network tasks, the script provides a user-friendly prompt, allowing users to restart their computers for the changes to take full effect.
