@@ -34,20 +34,22 @@ Choose from popular DNS Providers:
 - **Quad9 (9.9.9.9)**
 - **Google (8.8.8.8)**
 
-- **Custom DNS Provider:** If you have a specific DNS Provider in mind, you can input its details, and the script will add your IPv4 and IPv6 DNS provider addresses.
+- **Custom DNS Provider:** If you have a specific DNS Provider in mind, you can input its details, and the script will apply your IPv4 and IPv6 DNS addresses across all active adapters.
+- **Reset DNS to Default (DHCP):** Reverts all active network adapters back to automatic DNS assignment.
 - **Ping Test:** The script includes an option to ping the recommended DNS Providers. Additionally, it allows you to input your custom DNS Provider for evaluation.
 
 ### 📈 Bufferbloat Optimization:
 
-We have integrated a powerful script from [Khorvie Tech](https://github.com/Khorvie-Tech/bufferbloat) to tackle bufferbloat issues. Bufferbloat occurs when network latency increases due to excessive buffering, especially during high-bandwidth usage. 
+We have integrated a powerful script from [Khorvie Tech](https://github.com/Khorvie-Tech/bufferbloat) to tackle bufferbloat issues. Bufferbloat occurs when network latency increases due to excessive buffering, especially during high-bandwidth usage.
 
 #### Features:
 - **Advanced Registry Changes:** Applies tweaks to optimize TCP/IP settings for lower latency.
+- **Dynamic Adapter Detection:** MTU settings are applied automatically to all active network adapters — no manual configuration needed.
 - **Compatible with Modern Windows Versions:** Ensures smooth operation with the latest Windows builds.
 - **Easy to Use:** The script runs seamlessly as part of the NSR process.
 
 #### Testing Results:
-To verify the improvements, we recommend using [WAVEFORM - Bufferbloat and Internet Speed Test](https://www.waveform.com/tools/bufferbloat) or similar tools. 
+To verify the improvements, we recommend using [WAVEFORM - Bufferbloat and Internet Speed Test](https://www.waveform.com/tools/bufferbloat) or similar tools.
 
 ### 🤝 User-Friendly Restart Option:
 
@@ -62,7 +64,7 @@ Get the latest version of the script from the [Releases](https://github.com/M1HA
    ```bash
    > NSR.bat
    ```
-   
+
 3. **🚨 Choose DNS Provider (Optional):**
    ```bash
    ---------------------------------------------------------------------
@@ -71,9 +73,10 @@ Get the latest version of the script from the [Releases](https://github.com/M1HA
 
    [1] Recommended DNS Providers
    [2] Enter Your Provider
-   [3] Exit
+   [3] Reset DNS to Default (DHCP)
+   [4] Back
 
-   Enter your choice (1-3):
+   Enter your choice (1-4):
    ```
 
 4. **📢 Explore the author's other project (Optional):**
@@ -84,7 +87,7 @@ Get the latest version of the script from the [Releases](https://github.com/M1HA
 
 5. **🌌 Restart (Optional):**
 If desired, restart your computer to apply the network settings changes.
-     ```bash
+   ```bash
    ---------------------------------------------------------------------
                             Exiting NSR
    ---------------------------------------------------------------------
@@ -92,7 +95,19 @@ If desired, restart your computer to apply the network settings changes.
    Do you want to restart the computer now? (Y/N): Y
      
    Thank you for utilizing the script! Your computer will restart shortly...
-     ```
+   ```
+
+## 📋 Changelog:
+
+### v0.9
+- **Fixed:** DNS bug where IPv6 addresses overwrote IPv4 — both are now applied in a single adapter call.
+- **Added:** Reset DNS to Default (DHCP) option under Change DNS Provider.
+- **Improved:** Bufferbloat Optimizer now dynamically detects all active adapters for MTU configuration instead of relying on hardcoded interface names.
+- **Improved:** Input validation across all menus.
+- **Improved:** Minor UI and wording consistency updates.
+
+### v0.8
+- Initial public release.
 
 ## ⚠️ Disclaimer:
 This script is provided as-is, and the author takes no responsibility for any damage, loss of data, or unforeseen consequences caused by its usage. Additionally, be sure to understand the implications of the network maintenance tasks, including potential risks associated with resetting network settings and loss of data, before running NSR on your system! Use this script at your own risk!
