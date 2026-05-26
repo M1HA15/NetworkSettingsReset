@@ -106,9 +106,6 @@ If desired, restart your computer to apply the network settings changes.
 - **Improved:** Input validation across all menus.
 - **Improved:** Minor UI and wording consistency updates.
 
-### v0.8
-- Initial public release.
-
 ## ⚠️ Disclaimer:
 This script is provided as-is, and the author takes no responsibility for any damage, loss of data, or unforeseen consequences caused by its usage. Additionally, be sure to understand the implications of the network maintenance tasks, including potential risks associated with resetting network settings and loss of data, before running NSR on your system! Use this script at your own risk!
 
